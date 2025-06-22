@@ -7,7 +7,7 @@ task.spawn(function()
             warn("[VFX Cleanup] 'OneTwo' successfully deleted.")
             break
         end
-        task.wait(0.1) -- cek setiap 0.1 detik
+        task.wait(0.1)
     end
 end)
 
