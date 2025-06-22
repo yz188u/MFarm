@@ -1,7 +1,15 @@
-local vfx = game:GetService("ReplicatedStorage"):WaitForChild("Assets"):WaitForChild("Vfx"):FindFirstChild("OneTwo")
-if vfx then
-    vfx:Destroy()
-end
+task.spawn(function()
+    local vfxFolder = game:GetService("ReplicatedStorage"):WaitForChild("Assets"):WaitForChild("Vfx")
+    while true do
+        local oneTwo = vfxFolder:FindFirstChild("OneTwo")
+        if oneTwo then
+            oneTwo:Destroy()
+            warn("[VFX Cleanup] 'OneTwo' successfully deleted.")
+            break
+        end
+        task.wait(0.1) -- cek setiap 0.1 detik
+    end
+end)
 
 -- Services
 local Players = game:GetService("Players")
