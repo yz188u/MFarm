@@ -1,3 +1,8 @@
+local vfx = game:GetService("ReplicatedStorage"):WaitForChild("Assets"):WaitForChild("Vfx"):FindFirstChild("OneTwo")
+if vfx then
+    vfx:Destroy()
+end
+
 -- Services
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
